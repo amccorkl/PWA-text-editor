@@ -18,12 +18,66 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      //webpack-plugin generates the html files
+      new HtmlWebpackPlugin({
+        //creates a copy of the the index.html file in the ./dist folder and inserts a script tag in bundle.js
+        template: './index.html',
+        title: "jate"
+      }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: './src-sw.js'
+      }),
+      new WebpackPwaManifest({
+        //provides the pwa options when offline
+        fingerprints: false,
+        inject: true,
+        display: 'standalone',
+        name: 'Jate',
+        short_name: 'jate',
+        description: 'Just Another Text Editor',
+        background_color: '#2abd6e',
+        theme_color: '#b3b5b4',
+        start_url: '/',
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
+      })
       
     ],
 
     module: {
       rules: [
-        
+        {
+          //this code also looks for a .css file and adds it into the bundle.js file
+          test: /\.css$/,  
+          // additional modules for converting the css into js
+          use: ['style-loader', 'css-loader'],  
+        },
+        {
+          // searches for image files with these extensions
+          test: /\.(png|svg|jpg|jpeg|gif)$/i, 
+          type: 'asset/resource'
+        },
+        {
+          // looks for .js files
+          test: /\.m?js$/,  
+          // ignores these files
+          exclude: /(node_modules|bower_components)/,  
+          use: {
+            // babel converts ECMAScript 2015+ to make it  compatible with older browsers
+            loader: 'babel-loader', 
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            }
+          }
+        }
       ],
     },
   };
