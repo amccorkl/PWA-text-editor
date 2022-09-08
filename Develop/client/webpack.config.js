@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+//DO I need the const {GenerateSW} instead of the WebpackPwaManifest above?
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
@@ -10,6 +11,7 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js'
+      // DO I need another file to be ready to open?
     },
     output: {
       //output for the bundles
@@ -24,6 +26,7 @@ module.exports = () => {
         title: "Jate"
       }),
       //injects our custom service worker
+      // DO I need the new GenerateSW()  here???
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: './src-sw.js'
