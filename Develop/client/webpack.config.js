@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-//DO I need the const {GenerateSW} instead of the WebpackPwaManifest above?
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
@@ -23,7 +22,7 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         //creates a copy of the the index.html file in the ./dist folder and inserts a script tag in bundle.js
         template: './index.html',
-        title: "Jate"
+        title: "Jate Text Editor"
       }),
       //injects our custom service worker
       // DO I need the new GenerateSW()  here???

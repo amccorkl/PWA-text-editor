@@ -33,7 +33,6 @@ export const putDb = async (content) => {
 
   console.log('🚀 - data saved to the database', result);
   
-  //console.error('putDb not implemented');
 };
 
 
@@ -47,7 +46,6 @@ export const getDb = async () => {
   const result = await request;
   console.log('result.value', result);
   return result;
- // console.error('getDb not implemented');
 };
 
 initdb();
