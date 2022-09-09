@@ -10,7 +10,6 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js'
-      // DO I need another file to be ready to open?
     },
     output: {
       //output for the bundles
@@ -25,7 +24,6 @@ module.exports = () => {
         title: "Jate Text Editor"
       }),
       //injects our custom service worker
-      // DO I need the new GenerateSW()  here???
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: './src-sw.js'
@@ -38,8 +36,8 @@ module.exports = () => {
         name: 'Jate',
         short_name: 'jate',
         description: 'Just Another Text Editor',
-        background_color: '#2abd6e',
-        theme_color: '#b3b5b4',
+        background_color: '#272822',
+        theme_color: '#31a9e1',
         start_url: '/',
         publicPath: '/',
         icons: [

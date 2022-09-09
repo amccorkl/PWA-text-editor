@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-
+This project creates a browser-based text editor that is deployed as a progressive web app (PWA). It can be installed on your local machine and runs in the browser or offline.  It features several data persistent techniques and uses several PWA dependencies including Babel, Webpack, and, IndexDB and Service Worker. 
 
 <details>
 <summary><strong>Table of Contents</strong></summary>
@@ -36,8 +36,6 @@ Distributed under the **MIT** license.
 ## Contributing Guidelines
 Code of Conduct outlined in the [Contributor Covenant](https://www.contributor-covenant.org/).
 
- > _**Note:** Any contributions are understood to be under the same MIT that covers the project. If this is a concern please contact me._
-
 ## Tests
 There are currently no tests written for this application.
 
@@ -46,17 +44,19 @@ There are currently no tests written for this application.
 - Node.js
 - Dependencies:
     - [express](https://www.npmjs.com/package/express) 
-    - [concurrently](https://www.npmjs.com/package/concurrently) 
+    - [concurrently](https://www.npmjs.com/package/concurrently) - run multiple commands concurrently such as npm install and npm build 
     - [webpack](https://www.npmjs.com/package/webpack) 
-        - babel:  
-        - html-webpack-plugin: 
+        - babel: allows different formats to be read
+        - html-webpack-plugin: simplifies html in my bundles
         - css-loader and style-loader: 
-        - webpack-pwa-manifest: 
-        - workbox-webpack-plugin:  
+        - webpack-pwa-manifest: allows for automatic icon resizing
+        - workbox-webpack-plugin: generates a service worker
 
 ## Screenshots
 
-![Screenshot of application installed locally]()
+![Screenshot of application installed locally](./assets/Screen%20Shot%202022-09-08%20at%202.16.37%20PM.png)
+![Screenshot from the inspect tool looking at Applications](./assets/Screen%20Shot%202022-09-08%20at%202.55.37%20PM.png)
+![Screenshot of the registered service worker](./assets/Screen%20Shot%202022-09-08%20at%202.54.50%20PM.png)
 
 ## Questions and Links
 Please reach out with any questions regarding the application.
