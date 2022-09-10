@@ -28,7 +28,7 @@ This project creates a browser-based text editor that is deployed as a progressi
 - The application can be installed on the local machine, and thus run locally, by clicking the install button and following the prompts.
 
 ## Usage
-
+This text editor will accept text, save it and rerender information when the browser is refreshed or when using the editor off-line.
 
 ## License
 Distributed under the **MIT** license.
@@ -46,11 +46,11 @@ There are currently no tests written for this application.
     - [express](https://www.npmjs.com/package/express) 
     - [concurrently](https://www.npmjs.com/package/concurrently) - run multiple commands concurrently such as npm install and npm build 
     - [webpack](https://www.npmjs.com/package/webpack) 
-        - babel: allows different formats to be read
-        - html-webpack-plugin: simplifies html in my bundles
-        - css-loader and style-loader: 
-        - webpack-pwa-manifest: allows for automatic icon resizing
-        - workbox-webpack-plugin: generates a service worker
+        - [babel](https://www.npmjs.com/package/@babel/core): allows different formats to be read
+        - [html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin): simplifies html in my bundles
+        - [css-loader](https://www.npmjs.com/package/css-loader) and [style-loader](https://www.npmjs.com/package/style-loader): 
+        - [webpack-pwa-manifest](https://www.npmjs.com/package/webpack-pwa-manifest): allows for automatic icon resizing
+        - [workbox-webpack-plugin](https://www.npmjs.com/package/workbox-webpack-plugin): generates a service worker
 
 ## Screenshots
 
