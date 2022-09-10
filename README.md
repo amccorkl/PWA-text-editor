@@ -53,7 +53,7 @@ There are currently no tests written for this application.
         - [workbox-webpack-plugin](https://www.npmjs.com/package/workbox-webpack-plugin): generates a service worker
 
 ## Screenshots
-
+![Screenshot of the app](./assets/Screen%20Shot%202022-09-10%20at%204.04.32%20PM.png)
 ![Screenshot of application installed locally](./assets/Screen%20Shot%202022-09-08%20at%202.16.37%20PM.png)
 ![Screenshot from the inspect tool looking at Applications](./assets/Screen%20Shot%202022-09-08%20at%202.55.37%20PM.png)
 ![Screenshot of the registered service worker](./assets/Screen%20Shot%202022-09-08%20at%202.54.50%20PM.png)
@@ -61,7 +61,7 @@ There are currently no tests written for this application.
 ## Questions and Links
 Please reach out with any questions regarding the application.
 
-The deployed application on [Heroku](https:)
+The deployed application on [Heroku](https://blooming-plains-36065.herokuapp.com/)
 
 The repository in [GitHub](https://github.com/amccorkl/PWA-text-editor)
 
